@@ -13,7 +13,7 @@ class ShouldUpdate extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    return nextState.changeStateCounter > 3 ? false : true;
+    return !(nextState.changeStateCounter > 3);
   }
 
   componentDidUpdate(prevProps, prevState) {
