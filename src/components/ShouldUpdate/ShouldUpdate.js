@@ -12,6 +12,10 @@ class ShouldUpdate extends React.Component {
     })
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextState.changeStateCounter > 3 ? false : true;
+  }
+
   componentDidUpdate(prevProps, prevState) {
     if (prevState.visible !== this.state.visible) {
       this.setState({changeStateCounter: this.state.changeStateCounter + 1})
