@@ -7,6 +7,10 @@ class ShowImage extends React.Component {
     isVisible: false
   }
 
+  handleClick = () => {
+    this.setState({isVisible: !this.state.isVisible})
+  }
+
   componentDidMount() {
     console.log("Перший render компоненту ShowImage");
   }
@@ -20,9 +24,7 @@ class ShowImage extends React.Component {
       <div className="container">
         <h3 className='title'>ShowImage Component</h3>
         {this.state.isVisible && <img src={nissanImage} alt="Nissan X-Trail 2023" className="car-img"></img>}
-        <button className="car-btn" onClick={() => {
-          this.state.isVisible ? this.setState({isVisible: false}) : this.setState({isVisible: true})
-        }}>Show Nissan X=Trail 2023</button>
+        <button className="car-btn" onClick={this.handleClick}>Show Nissan X=Trail 2023</button>
       </div>
     )
   }

@@ -14,7 +14,6 @@ class IncreaseNumberWhenUpdate extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log("Update IncreaseNumberWhenUpdate component")
     if (prevState.visible !== this.state.visible) {
       this.setState({changeStateCounter: this.state.changeStateCounter + 1})
     }
