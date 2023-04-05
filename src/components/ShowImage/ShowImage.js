@@ -12,7 +12,7 @@ class ShowImage extends React.Component {
   }
 
   componentDidUpdate() {
-    this.state.isVisible ? alert("Компонент відкривається") : alert("Компонент закривається");
+    this.state.isVisible ? alert("Компонент ShowImage відкривається") : alert("Компонент ShowImage закривається");
   }
 
   render() {
