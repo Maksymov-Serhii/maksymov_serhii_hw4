@@ -2,12 +2,17 @@ import React from "react";
 import "./IncreaseNumberWhenUpdate.css"
 
 class IncreaseNumberWhenUpdate extends React.Component {
+  constructor() {
+    super();
+    this.handleClick = this.handleClick.bind(this);
+  }
+
   state = {
     changeStateCounter: 0,
     visible: false,
   }
 
-  handleClick = () => {
+  handleClick() {
     this.setState({
       visible: !this.state.visible
     })

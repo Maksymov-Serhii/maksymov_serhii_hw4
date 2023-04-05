@@ -3,11 +3,16 @@ import nissanImage from "../../images/nissan.jpg";
 import "./ShowImage.css";
 
 class ShowImage extends React.Component {
+  constructor() {
+    super();
+    this.handleClick = this.handleClick.bind(this);
+  }
+
   state = {
     isVisible: false
   }
 
-  handleClick = () => {
+  handleClick() {
     this.setState({isVisible: !this.state.isVisible})
   }
 
