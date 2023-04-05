@@ -1,4 +1,5 @@
 import IncreaseNumberWhenUpdate from '../IncreaseNumberWhenUpdate/IncreaseNumberWhenUpdate';
+import ShouldUpdate from '../ShouldUpdate/ShouldUpdate';
 import ShowImage from '../ShowImage/ShowImage';
 import './App.css';
 
@@ -9,6 +10,7 @@ function App() {
       <h3 className='title'>Welcome</h3>
       <ShowImage />
       <IncreaseNumberWhenUpdate />
+      <ShouldUpdate />
     </div>
   );
 }
